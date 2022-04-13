@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.post.meridiem.artemis.config.listener.ArtemisListenerConfiguration,com.post.meridiem.artemis.config.publisher.ArtemisPublisherConfiguration
