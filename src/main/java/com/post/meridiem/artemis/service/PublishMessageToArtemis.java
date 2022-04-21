@@ -10,6 +10,7 @@ import org.springframework.jms.core.MessagePostProcessor;
 import org.springframework.messaging.support.MessageBuilder;
 
 import javax.jms.JMSException;
+import javax.jms.Message;
 import java.util.Map;
 import java.util.function.BiConsumer;
 
@@ -46,7 +47,7 @@ public class PublishMessageToArtemis {
         };
     }
 
-    private BiConsumer<String, Object> getProcessorWithKeyValue(javax.jms.Message postProcessor) {
+    private BiConsumer<String, Object> getProcessorWithKeyValue(Message postProcessor) {
         return (headerKey, headerValue) -> {
             try {
                 if (isValidHeaderKey(headerKey)) {
