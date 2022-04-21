@@ -20,19 +20,27 @@ Multi-Protocol Messaging. [Apache ActiveMQ](https://activemq.apache.org/componen
 It supports industry standard protocols so users get the benefits of client choices across a broad range of languages and platforms.
 
 ## Working
-Push data into Artemis Queue
+**Push data into Artemis Queue**
+
     1.Construct the data needed to be pushed
     2.Set it on to the camel body 
     3.Set the queue name to be published as a header value
     4.Invoke **pushMessageToQueue**
 
-Push data into Artemis Queue with Attributes
+**Push data into Artemis Queue with Attributes**
+
     1.Construct the data needed to be pushed
     2.Set it on to the camel body
     3.Set the queue name to be published as a header value
     4.Set the attributes to be passed as header map
     5.Invoke **pushMessageToQueue**
 
-Consume data from Artemis Queue
+**Consume data from Artemis Queue**
+
     1.Construct the **env.artemis.listener.queue.target.map** containing queue to be consumed 
     2.Consume the message from Queue and send it to camel direct
+    
+## Build
+```
+mvn clean install
+```
